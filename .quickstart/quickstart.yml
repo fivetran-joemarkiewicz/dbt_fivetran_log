@@ -8,6 +8,8 @@ table_variables:
     - destination_membership
   fivetran_platform_using_user:
     - user
+  fivetran_platform_using_connector_sdk:
+    - connector_sdk
 
 destination_configurations:
   databricks:

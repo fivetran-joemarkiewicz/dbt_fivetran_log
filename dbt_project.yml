@@ -1,6 +1,6 @@
 config-version: 2
 name: 'fivetran_log'
-version: '1.11.0'
+version: '1.12.0'
 require-dbt-version: [">=1.3.0", "<2.0.0"]
 
 models:
@@ -17,6 +17,7 @@ vars:
     account: "{{ source('fivetran_platform', 'account') }}"
     incremental_mar: "{{ source('fivetran_platform', 'incremental_mar') }}"
     connector: "{{ source('fivetran_platform', 'connector') }}"
+    connector_sdk: "{{ source('fivetran_platform', 'connector_sdk') }}"
     credits_used: "{{ source('fivetran_platform', 'credits_used') }}"
     destination: "{{ source('fivetran_platform', 'destination') }}"
     destination_membership: "{{ source('fivetran_platform', 'destination_membership') }}"

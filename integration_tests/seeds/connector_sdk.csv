@@ -1,0 +1,4 @@
+connector_id,_fivetran_synced,connecting_user_id,connector_name,destination_id,paused,signed_up,_fivetran_deleted
+new_one,2021-03-12 21:03:45.994,this_person,one,ups_trampoline,false,2020-08-31 19:00:22.913630,false
+second_one,2021-03-12 21:03:45.991,off_ence,two,television_trace,false,2019-03-22 18:49:12.833910,false
+third_one,2023-05-18 15:57:06.879000,intimation_awkwardly,three,obtained_willow,false,2020-05-18 18:13:43.563198,false
