@@ -1,3 +1,24 @@
+# dbt_fivetran_log v1.12.0
+
+## Full Deprecation
+- Renaming the `fivetran_platform__mar_usage_history` to `fivetran_platform__usage_history`
+
+## Breaking Changes
+- A new tmp and staging model for connector sdk
+  - Note detailing the variable to turn on/off this table reference if it's not leveraged.
+
+## Feature Updates
+- Supporting the new connector_sdk source
+- Updating the `stg_fivetran_platform__log` model to include new logic for the `event_subtype` field which now takes into account succeeded and failed connector_sdk events.
+
+## Documentation Changes
+- Updated the naming of the `fivetran_platform__mar_usage_history` yml docs to now reference the updated `fivetran_platform__usage_history` name.
+
+## Under the Hood
+- New intermediate model to union connector and connector_sdk records
+- Downstream models now reference this unioned intermediate model.
+- New seed files to support the integration testing of the new connector_sdk source table.
+
 # dbt_fivetran_log v1.11.0
 [PR #141](https://github.com/fivetran/dbt_fivetran_log/pull/141) includes the following updates:
 
