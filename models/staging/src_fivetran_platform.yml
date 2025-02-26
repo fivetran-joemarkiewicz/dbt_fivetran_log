@@ -70,6 +70,30 @@ sources:
           - name: _fivetran_synced
             description: Timestamp when the record was last synced.
 
+      - name: connector_sdk
+        identifier: "{{ var('fivetran_platform_connector_sdk_identifier', 'connector_sdk')}}"
+        description: >
+          Table of all connectors loading data into destinations. Deleted connectors 
+          remain in the table but can be identified by having an older `_fivetran_synced` timestamp.
+        freshness: null
+        columns: 
+          - name: connector_id
+            description: System-generated unique ID of the connector.
+          - name: connecting_user_id
+            description: Foreign key referencing the user who set up the connector.
+          - name: connector_name
+            description: Name of the connector. This may differ from `incremental_mar.schema_name`.
+          - name: connector_type
+            description: Type of connector (e.g., Google Sheets, Webhooks).
+          - name: destination_id
+            description: Foreign key referencing the destination receiving data from the connector.
+          - name: paused
+            description: Boolean indicating whether the connector's sync is currently paused.
+          - name: signed_up
+            description: Timestamp when the connector was set up.
+          - name: _fivetran_synced
+            description: Timestamp when the record was last synced.
+
       - name: credits_used
         identifier: "{{ var('fivetran_platform_credits_used_identifier', 'credits_used')}}"
         freshness: null

@@ -10,7 +10,7 @@ with incremental_mar as (
 connector as (
 
     select *
-    from {{ ref('stg_fivetran_platform__connector') }}
+    from {{ ref('int_fivetran_platform__connector') }}
 ),
 
 destination as (
